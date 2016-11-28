@@ -415,6 +415,37 @@
         
         
         
+        $(function() {
+            var h = $(window).height();
+
+          $('#wrapper1').css('display','none');
+          $('#loader-bg ,#loader').height(h).css('display','block');
+        });
+ 
+        
+        //ソースコードの読み込み完了時の処理
+        $(window).load(function () { //全ての読み込みが完了したら実行
+          //initialize()を起動してjsonを読み込む
+          initialize();    
+          $('#loader-bg').delay(900).fadeOut(800);
+          $('#loader').delay(600).fadeOut(300);
+          $('#wrapper1').css('display', 'block');
+        });
+ 
+        //10秒たったら強制的にロード画面を非表示
+        $(function(){
+          setTimeout('stopload()',10000);
+        });
+ 
+        function stopload(){
+          $('#wrapper1').css('display','block');
+          $('#loader-bg').delay(900).fadeOut(800);
+          $('#loader').delay(600).fadeOut(300);
+        }
+        
+        
+        
+        
 	});
         
     
