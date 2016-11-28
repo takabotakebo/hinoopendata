@@ -300,6 +300,9 @@
              for(var i=1; i<= marker_amount; i++){
                     marker[i].setMap(map);
              }
+             
+             var infowindow_bars = document.getElementById("infowindow-bars");
+             infowindow_bars.innerHTML = " ";
          }
 
 
