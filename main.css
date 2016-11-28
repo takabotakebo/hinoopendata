@@ -1,0 +1,181 @@
+body{
+ margin:0;
+}
+
+#wrapper1{
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    top: 0px;
+    background-color: #FFF;
+    text-align: center;
+    font-family: "Hiragino Maru Gothic Pro", Meiryo;
+    font-weight: lighter;
+    z-index: 1;
+}
+
+#wrapper2{
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    top: 0px;
+}
+
+
+.map-embed
+{
+	max-width: 100% ;
+    min-height: 56.25vw;
+	
+	margin: 0 ;
+
+	overflow: hidden ;
+    height: 80vh;
+
+	position: relative ;
+	top: 0 ;
+	left: 0 ;
+    
+    padding: 0px;
+}
+
+.map-embed > div
+{
+	position: absolute ;
+	top: 0 ;
+	left: 0 ;
+
+	width: 100% ;
+	height: 100% ;
+
+	margin: 0 ;
+	padding: 0 ;
+}
+
+.map-embed img
+{
+	max-width: none ;
+}
+
+#form1{
+    position: absolute;
+    top:100px;
+}
+
+
+#infowindow-wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    border:solid 1px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 5;
+}
+
+#infowindow-output {
+    position: absolute;
+    border:solid 1px;
+    top: 100px;
+}
+
+
+
+/*カレンダー表示に関するスタイル*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*日付選択ラベル*/
+#calendar_label{
+    font-size: 18pt;
+    margin-top: 13%;
+    letter-spacing: 1pt;
+}
+/*カレンダー生成場所*/
+.calendar_zone{
+    color: #000000;
+    width: 90%;
+    
+    font-family:inherit;
+    font-size: 14pt;
+}
+/*今月の表示ラベル*/
+.now_month{
+    margin: 0 auto;
+    color: #000;
+    text-align: center;
+    font-size: 21pt;
+    margin-bottom: 5pt;
+    letter-spacing: 1pt;
+    border: solid;
+    width: 30vw;
+}
+/*前月移動ボタン*/
+#prev_month{
+    color: #4A4A4A;
+    float: left;
+    font-size: 13pt;
+    text-decoration: none;
+    letter-spacing: 1pt;
+    margin-left: 7%;
+    top: 0px;
+    border: solid 1px;
+}
+/*翌月移動ボタン*/
+#next_month{
+    color: #4A4A4A;
+    float: right;
+    font-size: 13pt;
+    text-decoration: none;
+    letter-spacing: 1pt;
+    margin-right: 7%;
+    top: 0px;
+    border: solid;
+}
+/*曜日*/
+.days_of_week{
+    height: 50px;
+}
+/*週*/
+.week1,
+.week2,
+.week3,
+.week4,
+.week5{
+    font-size: 18pt;
+    height: 50px;
+}
+/*土曜*/
+.sat0,
+.sat1,
+.sat2,
+.sat3,
+.sat4{
+    color: #0A34DB;
+}
+        
+/*日曜・祝日*/
+.month1 .date1,/* 元日 */
+.month1 .mon2,/* 成人の日 */
+.month2 .date11,/* 建国記念の日 */
+.month4 .date29,/* 昭和の日 */
+.month5 .date3,/* 憲法記念日 */
+.month5 .date4,/* みどりの日 */
+.month5 .date5,/* こども日 */
+.month7 .mon3,/* 海の日 */
+.month9 .mon3,/* 敬老の日 */
+.month10 .mon2,/* 体育の日 */
+.month11 .date3,/* 文化の日 */
+.month11 .date23,/* 勤労感謝の日 */
+.month12 .date23,/* 天皇誕生日 */
+#d20110321,/* 春分の日（年によって異なる 20日 - 21日） */
+#d20110923,/* 秋分の日（年によって異なる 20日 - 24日） */
+.sun0,
+.sun1,
+.sun2,
+.sun3,
+.sun4,
+.sun5{
+    color: #D0021B;
+}
