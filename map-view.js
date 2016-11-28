@@ -274,7 +274,7 @@
 
                 //生成した情報ウィンドウをどのマーカーに対応させるか
                 marker[marker_number].addListener('click', function() { // マーカーをクリックしたとき
-                    infoWindow[marker_number].open(main_mapview, marker[marker_number]); // マップとマーカーの指定
+                    //infoWindow[marker_number].open(main_mapview, marker[marker_number]); // マップとマーカーの指定(非表示にする)
                     info_div_view();   //マーカーをクリックしたらinfo_div()を表示
                     $().ready(function(){
                         $("#infowindow-output,#infowindow-wrapper").show();
