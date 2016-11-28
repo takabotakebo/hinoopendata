@@ -410,7 +410,7 @@
         });  
 
 		$("#calendar_zone").click(function () {
-            $('#wrapper1').fadeOut();
+            $('#wrapper1').slideUp();
         }); 
         
         
