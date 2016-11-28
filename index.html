@@ -80,10 +80,6 @@
         </div>
     </div>
 
-    <!-- マーカーを消すボタン -->
-    <input type="button" value="kill em all" onclick = "removeMarker(null)">
-
-   
    
     <!-- 情報ウィンドウdivを表示する場所  -->
     <div id="infowindow-wrapper">
@@ -101,8 +97,19 @@
     <!-- S3 -->
     <!--callbackでS2のinit()を呼び出している。htmlの表示部分をcssで大きさ指定しないと表示されない -->   
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGR_l8pxOrb1H3cMBvBrLnsAI55rzJel4&callback=initMap">
-    </script>    
+    </script>  
     
-</div>    
+    <div id="infowindow-bars">
+        情報の箇条書き
+    </div>  
+    
+    <div id="footer-bar">
+        <div id="back-to-calender" onclick = "removeMarker(null)">カレンダーへ戻る</div>
+    </div>
+    
+</div> 
+
+
+      
 </body>
 </html>

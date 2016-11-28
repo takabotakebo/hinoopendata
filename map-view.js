@@ -413,6 +413,15 @@
             $('#wrapper1').slideUp();
         }); 
         
+        $("#back-to-calender").click(function () {
+            $('#wrapper1').slideDown();
+        }); 
+        
+        
+        
+        
+        
+        
         
         
         $(function() {
@@ -442,6 +451,7 @@
           $('#loader-bg').delay(900).fadeOut(800);
           $('#loader').delay(600).fadeOut(300);
         }
+        
         
         
         
