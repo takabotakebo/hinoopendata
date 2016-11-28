@@ -281,6 +281,14 @@
                     });
                 });
                 
+                
+                var infowindow_bars = document.getElementById("infowindow-bars");
+                var div_element = document.createElement("div");
+                div_element.setAttribute('class', 'info-bars');
+                div_element.innerHTML = ivent[4];
+                infowindow_bars.appendChild(div_element);
+                
+                
             }
             
             marker_amount = marker_amount + filtared_ivent_length;
@@ -418,8 +426,7 @@
             $('#infowindow-bars').toggle();
         }); 
         
-        
-        
+
         
         
         $(function() {

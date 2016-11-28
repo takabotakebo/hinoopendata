@@ -117,9 +117,11 @@ body{
     border: solid 1px;
     bottom: 5vh;
     width: 100vw;
-    height: 30vh;
+    height: auto;
     background-color: white;
     z-index: 1;
+    max-height: 30vh;
+    overflow: scroll;
 }
 
 
@@ -139,6 +141,10 @@ body{
 #toggle-infowindow-bars{
     float: right;
     width: 30vw;
+}
+
+.info-bars{
+    height: 50vh;
 }
 
 /*カレンダー表示に関するスタイル*/
