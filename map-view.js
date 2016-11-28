@@ -260,6 +260,9 @@
                     document.getElementById("infowindow-output-genre").innerHTML = ivent[8];
                     document.getElementById("infowindow-output-etc").innerHTML = ivent[6];
                     document.getElementById("infowindow-output-tel").innerHTML = "042-" + ivent[5];
+                    //移動ボタンにivent[3]を目的地として挿入
+                    document.getElementById("open_navigation").href = "http://maps.google.com/maps?saddr=&daddr=" + ivent[3] +"&z=15"
+                    console.log(ivent);
                     console.log(ivent);
                 }
 
