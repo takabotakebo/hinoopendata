@@ -11,7 +11,7 @@
 
         //数値の初期設定
         var apiKey = 'AIzaSyDV-W1Zg9_wGJPww-NT5tz9Wi78QF-sDuM';
-        var tableId = '1S-TsySWCD9FyNe8kOgbBvzfY_ZcdGLe1jer2Cj2L';
+        var tableId = '1Z5wytXgqUl5bbkXf_QOradh4QAEICkBXu1HEa_s_';
         var dataArray = {};
         var all_iventData = {};
         
@@ -259,12 +259,13 @@
                     document.getElementById("infowindow-output-location").innerHTML = ivent[3];
                     document.getElementById("infowindow-output-genre").innerHTML = ivent[8];
                     document.getElementById("infowindow-output-etc").innerHTML = ivent[6];
-                    document.getElementById("infowindow-output-tel").innerHTML = "042-" + ivent[5];
+                    document.getElementById("infowindow-output-tel").innerHTML = "<a href='tel:042-" + ivent[5] + "'>042-" + ivent[5] + "</a>";
                     //移動ボタンにivent[3]を目的地として挿入
                     document.getElementById("open_navigation").href = "http://maps.google.com/maps?saddr=&daddr=" + ivent[3] +"&z=15"
                     console.log(ivent);
-                    console.log(ivent);
                 }
+                
+                
 
 
                 //情報ウィンドウの設定
