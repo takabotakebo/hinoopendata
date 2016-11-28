@@ -34,7 +34,6 @@ body{
     width: 100vw;
     height: 95vh;
     margin: 0px;
-    top:5vh;
     background-color: #FFF;
     text-align: center;
     font-family: "Hiragino Maru Gothic Pro", Meiryo;
@@ -51,11 +50,10 @@ body{
     top: 5vh;
 }
 
-
 .map-embed
 {
 	width: 100vw ;
-    min-height: 85vh;
+    min-height: 90vh;
 	
 	margin: 0 ;
 
@@ -131,6 +129,16 @@ body{
     bottom: 0px;
     width: 100vw;
     height: 5vh;
+}
+
+#back-to-calender{
+    float: left;
+    width: 40vw;
+}
+
+#toggle-infowindow-bars{
+    float: right;
+    width: 30vw;
 }
 
 /*カレンダー表示に関するスタイル*/
