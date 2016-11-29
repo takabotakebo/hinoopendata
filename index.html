@@ -1,123 +1,23 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="content-language" content="ja">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>FusionTables Test</title>
 
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//apis.google.com/js/client.js"></script>
-    <script src="//www.google.com/jsapi"></script>
-    <script src="map-view.js"></script>
-     
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="content-language" content="ja">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <title>FusionTables Test</title>
 
-<body>
-<!-- ローディング画面の描画 -->
-<div id="loader-bg">
-  <div id="loader">
-    <img src="img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
-    <p>Now Loading...</p>
-  </div>
-</div>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//apis.google.com/js/client.js"></script>
+        <script src="//www.google.com/jsapi"></script>
+        <script src="map-view.js"></script>
 
-
-
-<!-- カレンダー画面の描画 -->
-<div id= "wrapper1">
-    <h1 id= "calendar_label">日付を選択してください</h1>
-    <span><a href="#" id= "prev_month"></a></span>
-    <span><a href="#" id= "next_month"></a></span>
-    <div id= "calendar_zone"></div>
+    </head>
     
-    <!-- カレンダーの描画 -->
-    <script>
-        window.onload = function(){
-           next_month_display = next_month + "月";
-           calendar(year,month);
-        }
+    <body>
         
-        //翌月移動のボタンがクリックされた時の処理
-        document.getElementById("next_month").onclick = function(){
-            prev_month = month;
-            month++;
-            if(month == 13 ){
-                year++;
-                month = 1;
-            }
-            next_month_display = " ";
-            prev_month_display = prev_month + "月";
-            calendar(year,month);
-            return false;
-        }
-        //前月移動のボタンがクリックされた時の処理
-        document.getElementById("prev_month").onclick = function(){
-            next_month = month;
-            month--;
-            if(month == 0 ){
-                year--;
-                month = 12;
-            }
-            prev_month_display = " " ;
-            next_month_display = next_month + "月";
-            calendar(year,month);
-            return false;
-        }
-    </script>
-</div>
-
-
-
-<!-- マップ画面の描画 -->
-<div id="wrapper2">
-
-    <div id="header-bar">
-        ヘッダーバーが来ます
-    </div>
-   
-    <!-- 地図描画部分 -->
-    <div id="map-view">
-        <div class="map-embed">
-            <div id="map-canvas">ここに地図が表示されます</div>
-        </div>
-    </div>
-
-   
-    <!-- 情報ウィンドウdivを表示する場所  -->
-    <div id="infowindow-wrapper">
-        <div id="infowindow-output">
-            <div id="infowindow-output-iventtitle">イベントタイトル</div>
-            <div id="infowindow-output-time">開催時間</div>
-            <div id="infowindow-output-place">開催場所</div>
-            <div id="infowindow-output-location">住所</div>
-            <div id="infowindow-output-genre">ジャンル</div>
-            <div id="infowindow-output-etc">備考</div>
-            <div id="infowindow-output-tel">042-</div>
-            <!-- 移動機能ボタン -->
-            <!-- ピンを目的地として現在地からのナビを起動する。今回はgoogle mapに絞る -->
-            <a href="" id="open_navigation">移動</a>
-        </div>
-    </div>
-
-    <!-- S3 -->
-    <!--callbackでS2のinit()を呼び出している。htmlの表示部分をcssで大きさ指定しないと表示されない -->   
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGR_l8pxOrb1H3cMBvBrLnsAI55rzJel4&callback=initMap">
-    </script>  
-    
-    <div id="infowindow-bars">
-        情報の箇条書き
-    </div>  
-    
-    <div id="footer-bar">
-        <div id="back-to-calender" onclick = "removeMarker(null)">カレンダーへ戻る</div>
-        <div id="toggle-infowindow-bars" >表示非表示</div>
-    </div>
-    
-</div> 
-
-
-      
-</body>
+        <a href="index1.html">カレンダー</a>
+        <a href="index2.html">ジャンル</a>
+        
+    </body>
 </html>
