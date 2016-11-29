@@ -322,3 +322,8 @@ body{
     font-size:14pt;
     border: solid;
 }
+
+#back-to-genre{
+    float: left;
+    width: 40vw;
+}
