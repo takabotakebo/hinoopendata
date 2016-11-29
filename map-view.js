@@ -43,14 +43,12 @@
                     console.log(dataArray["rows"]);     //dataArrayに格納できているかの確認
                     
                     all_iventData = dataArray["rows"];
-                    //console.log(all_iventData);
                     
                 },
                 error: function( data ) {
                         $( '#sample-result' ).html( '<font color="red">読み込みNG(ChromeではNG)</font>' );
                 }
             });
-            
             
             
             $.getJSON("jsons/kodomo.json", function(data){
@@ -114,6 +112,8 @@
         //出ているマーカーの個数をカウントする変数
         var marker_amount = 0;
         
+        var ivent = [];
+
         
         //マーカーの表示
         function initMarker(sel){
@@ -126,9 +126,6 @@
             //
             var selected_date;
             selected_date = sel;
-            //console.log(selected_date);
-            
-            
             
             
             //イベントをフィルタにかけて格納し直す(検索済みのobjectを生成)
@@ -139,8 +136,7 @@
             //all_iventDataに入っている要素数を一度０にして初期化してからカウント
             var ivent_length = 0;
             ivent_length = Object.keys(all_iventData).length;
-            //console.log(ivent_length);
-            
+
             
             //フィルターをかけたイベントを格納するobjectを生成・初期化
             var filtered_iventData = {} ;
@@ -179,8 +175,23 @@
             for(var i = 0;i < filtared_ivent_length ; i++){
                 
                 
+                
+                var marker_number ;
+                
+                //marker_numberの重複回避のためのif文
+                if(marker_amount == 0){
+                    marker_number = 1;
+                }else{
+                    marker_number = marker_amount +1;
+                }
+                
+                marker_number = marker_number + i ;
+                
+                
+                
+                
                 //イベントデータの取得.
-                var ivent = filtered_iventData[i];
+                ivent[marker_number] = filtered_iventData[i];
 
                 //filtered_iventData[]からキー値を指定してオブジェクトivent[]として取り出す
                 //0:曜日
@@ -207,7 +218,7 @@
                 for(var a = 1; a< ivent_length +1 ; a++){
                     
                     //一致した時のみ、marker_locatonに緯度経度を格納
-                    if(ivent[3] == geocode_dataArray[a]["address"]){
+                    if(ivent[marker_number][3] == geocode_dataArray[a]["address"]){
                         marker_location = {
                             lat: geocode_dataArray[a]["location"][1], // 緯度
                             lng: geocode_dataArray[a]["location"][0]// 経度
@@ -215,81 +226,25 @@
                     }
                 }
                 
-                
-                //console.log(ivent);
-                //console.log(marker_location);
-                
-                
+ 
                 //GeoCodeをmarkerpositionに格納
                 var marker_position;
                 
-                //console.log(marker_location["lat"]);
                 marker_position = {
                         lat: marker_location["lat"], // 緯度
                         lng: marker_location["lng"]// 経度
                     };
                 
                 console.log(marker_position);
-                
-                var marker_number ;
-                
-                //marker_numberの重複回避のためのif文
-                if(marker_amount == 0){
-                    marker_number = 1;
-                }else{
-                    marker_number = marker_amount +1;
-                }
-                
-                marker_number = marker_number + i ;
-                
-                //マーカーの生成 (marker[]が重複せず格納されるようにする)
-                marker[marker_number] = new google.maps.Marker({ // マーカーの追加
-                    position: marker_position, // マーカーを立てる位置を指定
-                    map: main_mapview // マーカーを立てる地図を指定
-                });
-                
-                //console.log(marker_amount);
 
-                
-                //クリックされたら表示するdivの設定
-                function info_div_view(){
-                    document.getElementById("infowindow-output-iventtitle").innerHTML = ivent[4];
-                    document.getElementById("infowindow-output-time").innerHTML = ivent[1];
-                    document.getElementById("infowindow-output-place").innerHTML = ivent[2];
-                    document.getElementById("infowindow-output-location").innerHTML = ivent[3];
-                    document.getElementById("infowindow-output-genre").innerHTML = ivent[8];
-                    document.getElementById("infowindow-output-etc").innerHTML = ivent[6];
-                    document.getElementById("infowindow-output-tel").innerHTML = "<a href='tel:042-" + ivent[5] + "'>042-" + ivent[5] + "</a>";
-                    //移動ボタンにivent[3]を目的地として挿入
-                    document.getElementById("open_navigation").href = "http://maps.google.com/maps?saddr=&daddr=" + ivent[3] +"&z=15"
-                    console.log(ivent);
-                }
-                
-                
-
-
-                //情報ウィンドウの設定
-                var infoWindow = []; //インスタンス化のための変数
-
-                //情報ウィンドウの生成
-                infoWindow[marker_number] = new google.maps.InfoWindow({ // 吹き出しの追加
-                    content: "<div class='sample'>"+ ivent +"</div>"// 吹き出しに表示する内容
-                });
-
-                //生成した情報ウィンドウをどのマーカーに対応させるか
-                marker[marker_number].addListener('click', function() { // マーカーをクリックしたとき
-                    //infoWindow[marker_number].open(main_mapview, marker[marker_number]); // マップとマーカーの指定(非表示にする)
-                    info_div_view();   //マーカーをクリックしたらinfo_div()を表示
-                    $().ready(function(){
-                        $("#infowindow-output,#infowindow-wrapper").show();
-                    });
-                });
+                //マーカーを生成する(情報が重複しないために引数としてmarker_numberを渡している)
+                markermake(marker_number,marker_position);
                 
                 
                 var infowindow_bars = document.getElementById("infowindow-bars");
                 var div_element = document.createElement("div");
                 div_element.setAttribute('class', 'info-bars');
-                div_element.innerHTML = ivent[4];
+                div_element.innerHTML = ivent[marker_number][4];
                 infowindow_bars.appendChild(div_element);
                 
                 
@@ -300,6 +255,33 @@
     
         }
         
+
+        //マーカーの生成をする関数
+        function markermake(numbering,location){
+
+                //マーカーの生成 (marker[]が重複せず格納されるようにする)
+                marker[numbering] = new google.maps.Marker({ // マーカーの追加
+                    position: location, // マーカーを立てる位置を指定
+                    map: main_mapview // マーカーを立てる地図を指定
+                });
+                
+            
+                //生成した情報ウィンドウをどのマーカーに対応させるか
+                marker[numbering].addListener('click', function() { // マーカーをクリックしたとき
+                    //infoWindow[marker_number].open(main_mapview, marker[marker_number]); // マップとマーカーの指定(非表示にする)
+                     info_div_view(numbering);
+                    
+                    $().ready(function(){
+                        $("#infowindow-output,#infowindow-wrapper").show();
+                    });
+                });
+
+        }
+
+
+
+
+        //マーカー削除の関数
          function removeMarker(map){
              for(var i=1; i<= marker_amount; i++){
                     marker[i].setMap(map);
@@ -308,6 +290,24 @@
              var infowindow_bars = document.getElementById("infowindow-bars");
              infowindow_bars.innerHTML = " ";
          }
+
+
+
+        //クリックされたら表示するdivの設定
+         function info_div_view(num){
+                document.getElementById("infowindow-output-iventtitle").innerHTML = ivent[num][4];
+                document.getElementById("infowindow-output-time").innerHTML = ivent[num][1];
+                document.getElementById("infowindow-output-place").innerHTML = ivent[num][2];
+                document.getElementById("infowindow-output-location").innerHTML = ivent[num][3];
+                document.getElementById("infowindow-output-genre").innerHTML = ivent[num][8];
+                document.getElementById("infowindow-output-etc").innerHTML = ivent[num][6];                    
+                document.getElementById("infowindow-output-tel").innerHTML = "<a href='tel:042-" + ivent[num][5] + "'>042-" + ivent[num][5] + "</a>";
+                //移動ボタンにivent[3]を目的地として挿入
+                document.getElementById("open_navigation").href = "http://maps.google.com/maps?saddr=&daddr=" + ivent[num][3] +"&z=15"
+                console.log(ivent[num]);
+         }
+                
+                
 
 
 // S3
