@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="ja">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>FusionTables Test</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//apis.google.com/js/client.js"></script>
+    <script src="//www.google.com/jsapi"></script>
+    <script src="map-view2.js"></script>
+     
+</head>
+
+<body>
+<!-- ローディング画面の描画 -->
+<div id="loader-bg">
+  <div id="loader">
+    <img src="img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+    <p>Now Loading...</p>
+  </div>
+</div>
+
+
+
+<!-- ジャンル画面の描画 -->
+<div id= "wrapper3">
+    <div id= "genre_selector">
+        <input type="button" id="genre01" value="相談" onclick=select_genre(this.id)><label for="genre01" class= "genre_button">相談</label>
+        <input type="button" id="genre02" value="コミュニティ" onclick=select_genre(this.id)><label for="genre02" class= "genre_button">コミュニティ</label>
+        <input type="button" id="genre03" value="健康" onclick=select_genre(this.id)><label for="genre03" class= "genre_button">健康</label>
+        <input type="button" id="genre04" value="子育て" onclick=select_genre(this.id)><label for="genre04" class= "genre_button">子育て</label>
+        <input type="button" id="genre05" value="出産" onclick=select_genre(this.id)><label for="genre05" class= "genre_button">出産</label>
+        <input type="button" id="genre06" value="講座" onclick=select_genre(this.id)><label for="genre06" class= "genre_button">講座</label>
+        <input type="button" id="genre07" value="エンタメ" onclick=select_genre(this.id)><label for="genre07" class= "genre_button">エンタメ</label>
+        <input type="button" id="genre08" value="その他" onclick=select_genre(this.id)><label for="genre08" class= "genre_button">その他</label>
+    </div>
+</div>
+
+
+
+<!-- マップ画面の描画 -->
+<div id="wrapper2">
+    
+    <div id="header-bar">
+        ヘッダーバーが来ます
+    </div>
+
+    <!-- 地図描画部分 -->
+    <div id="map-view">
+        <div class="map-embed">
+            <div id="map-canvas">ここに地図が表示されます</div>
+        </div>
+    </div>
+
+   
+    <!-- 情報ウィンドウdivを表示する場所  -->
+    <div id="infowindow-wrapper">
+        <div id="infowindow-output">
+            <div id="infowindow-output-iventtitle">イベントタイトル</div>
+            <div id="infowindow-output-time">開催時間</div>
+            <div id="infowindow-output-place">開催場所</div>
+            <div id="infowindow-output-location">住所</div>
+            <div id="infowindow-output-genre">ジャンル</div>
+            <div id="infowindow-output-etc">備考</div>
+            <div id="infowindow-output-tel">042-</div>
+            <!-- 移動機能ボタン -->
+            <!-- ピンを目的地として現在地からのナビを起動する。今回はgoogle mapに絞る -->
+            <a href="" id="open_navigation">移動</a>
+        </div>
+    </div>
+
+    <!-- S3 -->
+    <!--callbackでS2のinit()を呼び出している。htmlの表示部分をcssで大きさ指定しないと表示されない -->   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGR_l8pxOrb1H3cMBvBrLnsAI55rzJel4&callback=initMap">
+    </script>  
+    
+    <div id="infowindow-bars">
+        情報の箇条書き
+    </div>  
+    
+    <div id="footer-bar">
+        <div id="back-to-genre" onclick = "removeMarker(null)">ジャンル選択へ戻る</div>
+        <div id="toggle-infowindow-bars" >表示非表示</div>
+    </div>
+    
+</div> 
+
+
+      
+</body>
+</html>

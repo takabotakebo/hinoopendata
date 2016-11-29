@@ -268,3 +268,57 @@ body{
 .sun5{
     color: #D0021B;
 }
+
+/*ジャンル表示に関するスタイル*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+#wrapper3{
+    position:absolute;
+    width: 100vw;
+    height: 95vh;
+    margin: 0px;
+    background-color: #FFF;
+    text-align: center;
+    font-family: "Hiragino Maru Gothic Pro", Meiryo;
+    font-weight: lighter;
+    z-index: 5;
+    
+}
+
+#genre01,
+#genre02,
+#genre03,
+#genre04,
+#genre05,
+#genre06,
+#genre07,
+#genre08{
+    display: none;
+}
+
+#genre_selector{
+    position: absolute;
+    margin: 0 auto;
+    width: 100vw;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction:row;
+    flex-direction:row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center; /* Safari */
+    justify-content: center;
+    -webkit-align-content: space-around;
+    align-content: space-around;
+    background-color: #FFF;
+    height: 100vh;
+
+}
+        
+.genre_button{
+    margin: 10px auto;
+    width: 80px;
+    height: 80px;
+    font-size:14pt;
+    border: solid;
+}
