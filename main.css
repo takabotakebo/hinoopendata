@@ -103,7 +103,6 @@ body{
     height: 89vh;
     position: absolute;
     top: 0px;
-    border:solid 1px;
     background-color: rgba(0,0,0,0.5);
     z-index: 5;
 }
@@ -113,18 +112,17 @@ body{
 */
 #infowindow-output {
     position: absolute;
-    border:solid 1px;
     top: 100px;
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 400px;
     background-color:white;
 }
 
 #infowindow-bars{
     position: absolute;
-    border: solid 1px;
     bottom: 5vh;
     width: 100vw;
     height: auto;
@@ -135,18 +133,18 @@ body{
 }
 
 /*フッターバーのスタイル
-  親要素はwrapper2でwidth: 100%(100vw);height: 100%(89vh);
+  親要素はwrapper2
 */
 #footer-bar{
     position: absolute;
-    border: solid 1px;
     bottom: 0px;
-    width: 100%;
+    width: 100vw;
     height: 5vh;
+    background-color:#69B766;
 }
 
-/*フッターバーのスタイル
-  親要素はwrapper2でwidth: 100%(100vw);height: 100%(89vh);
+/*ヘッダーバーのスタイル
+  親要素はwrapper2
 */
 #header-bar{
     position: absolute;
