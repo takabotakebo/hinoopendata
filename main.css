@@ -168,6 +168,8 @@ body{
     width: 82vw;
     height: 400px;
     background-color:white;
+    border-radius:10px;
+    overflow:hidden;
 }
 
 /*情報ポップアップのタイトルのスタイル
@@ -229,6 +231,7 @@ body{
     overflow: scroll;
     bottom:90px;
     font-size: 10pt;
+    border-radius:5px;
 }
 
 #infowindow-output-etc{
@@ -244,6 +247,62 @@ body{
     bottom:0px;
     background-color:#69B766;
 }
+
+
+/*情報ポップアップの電話のボタンのスタイル
+*/
+#infowindow-output-tel-box{
+    float: left;
+    width: 49.5%;
+    height: 70px;
+    bottom:0px;
+    border-right: solid 1px;
+    border-right-color: white;
+}
+
+
+/*情報ポップアップのナビゲーションのボタンのスタイル
+*/
+#infowindow-output-navi-box{
+    float: left;
+    width: 49.5%;
+    height: 70px;
+    bottom:0px;
+    border-left: solid 1px;
+    border-left-color: white;
+    
+}
+
+.infowindow-output-buttonbox-icon{
+    float:left;
+    height: 56px;
+    width: 56px;
+    margin-top:7px;
+    margin-left: 15px;
+}
+
+
+.infowindow-output-buttonbox-text{
+    float:left;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    color: white;
+    font-size: 10pt;
+    line-height: 70px;
+}
+
+
+.infowindow-output-buttonbox-text2{
+    float:left;
+    text-align: center;
+    width: 70px;
+    height: 35px;
+    color: white;
+    font-size: 10pt;
+    margin-top: 17.5px;
+}
+
 
 /*情報一覧のスタイル
   親要素はwrapper2

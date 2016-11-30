@@ -67,18 +67,45 @@
     <div id="infowindow-wrapper">
         <div id="infowindow-output">
             <div id="infowindow-output-iventtitle">イベントタイトル</div>
-            <div id="infowindow-output-time">開催時間</div>
-            <div id="infowindow-output-place">開催場所</div>
-            <div id="infowindow-output-location">住所</div>
-            <div id="infowindow-output-genre">ジャンル</div>
-            <div id="infowindow-output-etc">備考</div>
-            <div id="infowindow-output-tel">042-</div>
-            <!-- 移動機能ボタン -->
-            <!-- ピンを目的地として現在地からのナビを起動する。今回はgoogle mapに絞る -->
-            <a href="" id="open_navigation">移動</a>
+            <div id="infowindow-output-when">
+                <div id="infowindow-output-iventtitle-tag">時間</div>
+                <span id="infowindow-output-date" class="infowindow-output-aftertag">開催日時</span>
+                <span id="infowindow-output-time" class="infowindow-output-aftertag">開催時間</span>
+            </div>
+            <div id="infowindow-output-where">
+                <div id="infowindow-output-iventtitle-tag">場所</div>
+                <div id="infowindow-output-place" class="infowindow-output-aftertag">開催場所</div>
+                <div id="infowindow-output-location" class="infowindow-output-aftertag">住所</div>
+            </div>
+            
+            <!-- 備考欄表示ボックス -->
+            <div id="infowindow-output-textarea">
+                <div id="infowindow-output-etc">備考</div>
+            </div>
+            
+            <div id="infowindow-output-buttonbox">
+                <!-- 電話機能ボタン -->
+                <a href="" id="infowindow-output-tel">
+                    <div id="infowindow-output-tel-box">
+                        <img src="img/tel.png" class="infowindow-output-buttonbox-icon">
+                        <span class="infowindow-output-buttonbox-text">電話する</span>
+                    </div>
+                </a>
+                <!-- 移動機能ボタン -->
+                <!-- ピンを目的地として現在地からのナビを起動する。今回はgoogle mapに絞る -->
+                <a href="" id="open_navigation">
+                    <div id="infowindow-output-navi-box">
+                        <img src="img/navi.png" class="infowindow-output-buttonbox-icon">
+                        <div class="infowindow-output-buttonbox-text2">
+                            <span>行き方を</span>
+                            <span>調べる</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
-
     <!-- S3 -->
     <!--callbackでS2のinit()を呼び出している。htmlの表示部分をcssで大きさ指定しないと表示されない -->   
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGR_l8pxOrb1H3cMBvBrLnsAI55rzJel4&callback=initMap">
