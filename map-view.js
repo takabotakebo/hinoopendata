@@ -482,6 +482,17 @@
 //##################################################################################################//
 
     $(function () {
+        
+        
+        // スクロールを無効にする
+        $(window).on('touchmove.noScroll', function(e) {
+            e.preventDefault();
+        });
+
+        // スクロール無効を解除する
+        //$(window).off('.noScroll');
+        
+        
         $().ready(function(){
             $("#infowindow-output,#infowindow-wrapper").hide();
                     
