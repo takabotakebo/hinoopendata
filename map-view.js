@@ -83,7 +83,6 @@
         
         //地図自体の表示
         function initMap() {
-            
             // キャンパスの要素を取得する
             var canvas = document.getElementById( 'map-canvas' ) ;
             
@@ -570,17 +569,60 @@
 //##################################################################################################//
 //##################################################################################################//
 
+    /*現在地の緯度経度を格納する変数をグローバル化*/
+    var myPoint ={};
+    /*現在地を示すための変数*/
+    var myMarker;
+    /*現在地を表示するためのオーバーレイ要素*/
+    myPosition.prototype = new google.maps.OverlayView();
+    //オーバーレイ要素の内容を宣言      
+    function myPosition(map, lat, lng){
+        this.lat_ = lat;
+        this.lng_ = lng;
+        this.setMap(map);
+    }
+    //オーバーレイするアイコンのhtml要素を生成
+      myPosition.prototype.draw = function() {
+    　   //一番親のhtml要素の宣言と初期化
+        var myLocation_point = this.myLocation_point_;
+    　   //要素が何もなかった時に生成実行
+        if (!myLocation_point) {
+            //今回はspanタグでかこっていアイコン生成します。
+            myLocation_point = this.myLocation_point_ = document.createElement('span');
+            myLocation_point.className = 'myLocation_point';
+            myLocation_point.style.border = "none";
+            myLocation_point.style.position = "absolutere";
+            myLocation_point.style.paddingLeft = "0px";
+	        //アニメーション部分は子要素として生成
+	        var ring= document.createElement("span");
+            ring.className='ring';
+    　       //子要素に配置
+            myLocation_point.appendChild(ring);
+            //生成部分のDOMを取得してオーバーレイ要素として追加
+            var panes = this.getPanes();
+            panes.overlayLayer.appendChild(myLocation_point);
+        }
+    
+        // 緯度、軽度の情報を、Pixel（google.maps.Point）に変換
+        var point = this.getProjection().fromLatLngToDivPixel( new google.maps.LatLng( this.lat_, this.lng_ ) );
+        //ポイントの"位置"をオーバーレイ要素の"位置"に追加     
+        if (point) {
+            myLocation_point.style.left = point.x + 'px';
+            myLocation_point.style.top = point.y + 'px';
+        }
+    };
+
+
+    //現在地を取得して実行する関数
     function get_myLocation() {
           if(navigator.geolocation){
           navigator.geolocation.getCurrentPosition(function(position){
-              var myPoint = {
+              myPoint = {
                   lat: position.coords.latitude,
                   lng: position.coords.longitude
               };
               //マーカーの追加  
-              var my_position = new google.maps.Marker({
-                  map: main_mapview, position: myPoint
-              });
+              myMarker = new myPosition(main_mapview, myPoint.lat, myPoint.lng);
               
           },function(){
                 alert('位置情報取得ができませんでした');
