@@ -121,7 +121,7 @@
             ];
             // 地図のオプションを設定する
             var mapOptions = {
-                zoom: 10 ,				// ズーム値
+                zoom: 12 ,				// ズーム値
                 center: lating ,		// 中心座標 [lating]
                 styles: style01,        //地図のスタイル適用
                 disableDefaultUI: true　//デフォルトUIをオフ
