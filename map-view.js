@@ -90,7 +90,7 @@
             // 中心の位置座標を指定する
             var lating = new google.maps.LatLng( 35.661278, 139.395139 );
             //スタイル情報を配列に保存
-            var style01 = [
+                        var style01 = [
               {
                 stylers: [
                     { hue: "#b4cb9e" },
@@ -102,6 +102,7 @@
                 featureType: "road",
                 elementType: "geometry",
                 stylers: [
+                
                   { lightness: 100 },
                   { visibility: "simplified" }
                 ]
@@ -117,11 +118,33 @@
                   stylers: [
                     { visibility: "off" }
                   ]
+              },{
+                featureType: "administrative.locality",
+                elementType: "geometry.fill",
+                stylers: [
+                  {
+                    color: "#ffac82"
+                  },
+                  {
+                    weight: 3
+                  }
+                ]
+              },{
+                featureType: "administrative.locality",
+                elementType: "labels.text",
+                stylers: [
+                  {
+                    color: "#ffac82"
+                  },
+                  {
+                    weight: 1
+                  }
+                ]
               }
             ];
             // 地図のオプションを設定する
             var mapOptions = {
-                zoom: 12 ,				// ズーム値
+                zoom: 13 ,				// ズーム値
                 center: lating ,		// 中心座標 [lating]
                 styles: style01,        //地図のスタイル適用
                 disableDefaultUI: true　//デフォルトUIをオフ
@@ -499,6 +522,33 @@
         
 	});
         
-    
+// S6
+//現在地取得script文################################################# //
+//##################################################################################################//
+//##################################################################################################//
+//##################################################################################################//
+//##################################################################################################//
+//##################################################################################################//
+//##################################################################################################//
+
+    function get_myLocation() {
+          if(navigator.geolocation){
+          navigator.geolocation.getCurrentPosition(function(position){
+              var myPoint = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+              };
+              //マーカーの追加  
+              var my_position = new google.maps.Marker({
+                  map: main_mapview, position: myPoint
+              });
+              
+          },function(){
+                alert('位置情報取得ができませんでした');
+          });
+        }else{
+            alert('位置情報取得ができませんでした');
+        }
+    }
       
     
