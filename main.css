@@ -41,7 +41,6 @@ body{
     margin-bottom:; 
     background-color: #FFF;
     text-align: center;
-    font-weight: lighter;
     z-index: 2;
     top: 0px;
 }
@@ -187,8 +186,6 @@ body{
 .calendar_zone{
     color: #000000;
     width: 90%;
-    
-    font-family:"Rounded Mplus 1c";
     font-size: 14pt;
 }
 /*今月の表示ラベル*/
