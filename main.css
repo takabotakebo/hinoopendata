@@ -318,19 +318,6 @@ body{
     line-height: 70px;
 }
 
-/*情報ポップアップのナビゲーションのボタンの横の文字スタイル
-*/
-.infowindow-output-buttonbox-text2{
-    float:left;
-    text-align: center;
-    width: 70px;
-    height: 35px;
-    color: white;
-    font-size: 10pt;
-    margin-top: 17.5px;
-    margin-right: 10px;
-}
-
 
 /*情報一覧のスタイル
   親要素はwrapper2
