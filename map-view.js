@@ -89,12 +89,42 @@
             
             // 中心の位置座標を指定する
             var lating = new google.maps.LatLng( 35.661278, 139.395139 );
-
-
+            //スタイル情報を配列に保存
+            var style01 = [
+              {
+                stylers: [
+                    { hue: "#b4cb9e" },
+                    { saturation: -20 },
+                    { lightness: 20 },
+                    { gamma: 1.51 }
+                ]
+              },{
+                featureType: "road",
+                elementType: "geometry",
+                stylers: [
+                  { lightness: 100 },
+                  { visibility: "simplified" }
+                ]
+              },{
+                featureType: "road",
+                elementType: "labels",
+                stylers: [
+                  { visibility: "off" }
+                ]
+              },{
+                  featureType: "poi.government",
+                  elementType: "labels",
+                  stylers: [
+                    { visibility: "off" }
+                  ]
+              }
+            ];
             // 地図のオプションを設定する
             var mapOptions = {
-                zoom: 14 ,				// ズーム値
+                zoom: 10 ,				// ズーム値
                 center: lating ,		// 中心座標 [lating]
+                styles: style01,        //地図のスタイル適用
+                disableDefaultUI: true　//デフォルトUIをオフ
             };
 
             // [canvas]に、[mapOptions]の内容の、地図のインスタンス([map])を作成する
