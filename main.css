@@ -35,11 +35,10 @@ body{
 }
 
 #choice_label{
+    margin-top: 35vh;
     font-weight: normal;
     text-align: center;
     font-size: 16pt;
-    margin: 0 auto;
-    margin-top:23vh;
 }
 
 .move{
