@@ -499,15 +499,19 @@
 
 		$("#calendar_zone").click(function () {
             $('#wrapper1').slideUp();
+            $('#infowindow-bars').show();
         }); 
         
         $("#back-to-calender").click(function () {
             $('#wrapper1').slideDown();
+            
         }); 
         
         $("#toggle-infowindow-bars").click(function () {
             $('#infowindow-bars').toggle();
         }); 
+        
+        
         
 
         
