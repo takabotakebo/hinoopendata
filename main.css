@@ -29,7 +29,8 @@ body{
 
 #title{
     text-align: center;
-    margin-top: 20vh;
+    position: relative;
+    top:15vh;
     color: #69b766;
 }
 
