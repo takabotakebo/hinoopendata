@@ -296,13 +296,14 @@
         //クリックされたら表示するdivの設定
          function info_div_view(num){
                 document.getElementById("infowindow-output-iventtitle").innerHTML = ivent[num][4];
+                document.getElementById("infowindow-output-date").innerHTML = "12月" + ivent[num][0] + "日";
                 document.getElementById("infowindow-output-time").innerHTML = ivent[num][1];
                 document.getElementById("infowindow-output-place").innerHTML = ivent[num][2];
                 document.getElementById("infowindow-output-location").innerHTML = ivent[num][3];
                 document.getElementById("infowindow-output-etc").innerHTML = ivent[num][6];                    
-                document.getElementById("infowindow-output-tel").innerHTML = "<a href='tel:042-" + ivent[num][5] + "'>042-" + ivent[num][5] + "</a>";
+                document.getElementById("infowindow-output-tel").href = "tel:042-" + ivent[num][5];
                 //移動ボタンにivent[3]を目的地として挿入
-                document.getElementById("open_navigation").href = "http://maps.google.com/maps?saddr=&daddr=" + ivent[num][3] +"&z=15"
+                document.getElementById("open_navigation").href = "http://maps.google.com/maps?saddr=&daddr=" + ivent[num][3] +"&z=15";
                 console.log(ivent[num]);
          }
                 
