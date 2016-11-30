@@ -5,13 +5,13 @@
     <meta http-equiv="content-language" content="ja">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>FusionTables Test</title>
-
+    
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//apis.google.com/js/client.js"></script>
     <script src="//www.google.com/jsapi"></script>
     <script src="map-view2.js"></script>
-     
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -27,6 +27,7 @@
 
 <!-- ジャンル画面の描画 -->
 <div id= "wrapper3">
+    <h1 id= "genre_label">ジャンルを選択してください</h1>
     <div id= "genre_selector">
         <input type="button" id="genre01" value="相談" onclick=select_genre(this.id)><label for="genre01" class= "genre_button">相談</label>
         <input type="button" id="genre02" value="コミュニティ" onclick=select_genre(this.id)><label for="genre02" class= "genre_button">コミュニティ</label>
