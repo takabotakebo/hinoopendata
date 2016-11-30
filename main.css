@@ -162,7 +162,7 @@ body{
 */
 #infowindow-output {
     position: absolute;
-    top: 100px;
+    top: 98px;
     margin-left: 9vw;
     margin-right: 9vw;
     width: 82vw;
@@ -181,10 +181,15 @@ body{
     width: 88%;
     margin-left: 6%;
     margin-right: 6%;
-    height: 30px;
+    height: 45px;
     top: 25px;
+    overflow: scroll;
+    
 }
 
+/*情報ポップアップの時間のスタイル
+  親要素はinfowindow-output;
+*/
 #infowindow-output-when{
     position: absolute;
     width: 88%;
@@ -194,7 +199,9 @@ body{
     top: 95px;
 }
 
-
+/*情報ポップアップの場所のスタイル
+  親要素はinfowindow-output;
+*/
 #infowindow-output-where{
     position: absolute;
     width: 88%;
@@ -218,6 +225,7 @@ body{
     width: 200px;
     font-size: 10pt;
     margin-left: 60px;
+    overflow: scroll;
 }
 
 
