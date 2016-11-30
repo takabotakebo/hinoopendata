@@ -10,6 +10,8 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//apis.google.com/js/client.js"></script>
     <script src="//www.google.com/jsapi"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGR_l8pxOrb1H3cMBvBrLnsAI55rzJel4">
+    </script>
     <script src="map-view.js"></script>
     <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
 </head>
@@ -45,6 +47,7 @@
            next_month_display = next_month + "月";
            calendar(year,month);
            get_myLocation();
+           initMap();
         }
         
         //翌月移動のボタンがクリックされた時の処理
@@ -105,10 +108,6 @@
         </div>
     </div>
 
-    <!-- S3 -->
-    <!--callbackでS2のinit()を呼び出している。htmlの表示部分をcssで大きさ指定しないと表示されない -->   
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGR_l8pxOrb1H3cMBvBrLnsAI55rzJel4&callback=initMap">
-    </script>  
     
     <div id="infowindow-bars">
         情報の箇条書き
