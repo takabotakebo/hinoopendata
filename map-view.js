@@ -325,7 +325,7 @@
     
         }
         
-
+        //情報一覧バーのボタンを押した時にpopupを表示するための関数
         function showinfo() {
             $("#infowindow-output,#infowindow-wrapper").show();
             console.log("表示成功");
