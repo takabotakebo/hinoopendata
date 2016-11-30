@@ -8,6 +8,7 @@ body{
     width: 100vw;
     height: 89vh;
     font-family: "Rounded Mplus 1c";
+    overflow: hidden;
 }
 
 /*トップページのスタイル*/
