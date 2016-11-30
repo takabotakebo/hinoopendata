@@ -339,7 +339,7 @@ body{
     bottom: 5vh;
     width: 100vw;
     height: auto;
-    background-color: white;
+    background-color: rgba(255,255,255,0.8);
     z-index: 1;
     max-height: 30vh;
     overflow: scroll;
@@ -350,6 +350,7 @@ body{
   親要素はinfowindow-bars
 */
 .info-bar-title{
+    float: left;
     margin-left: 2vw;
     width: 70vw;
     height: 20px;
@@ -363,6 +364,7 @@ body{
   親要素はinfowindow-bars
 */
 .info-bar-date{
+    float: left;
     margin-left: 10vw;
     font-size: 10pt;
     width: 70vw;
@@ -375,6 +377,7 @@ body{
   親要素はinfowindow-bars
 */
 .info-bar-place{
+    float: left;
     margin-left: 10vw;
     font-size: 10pt;
     width: 70vw;
@@ -419,6 +422,19 @@ body{
 
 .info-bars{
     height: 5vh;
+}
+
+.info-bar-infobutton{
+    float: right;
+    width: 5vh;
+    height: 5vh;
+    margin-right: 15px;
+    margin-top: -3.5vh;
+}
+
+hr{
+    float: left;
+    width: 100%;
 }
 
 /*カレンダー表示に関するスタイル*/

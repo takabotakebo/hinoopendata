@@ -305,10 +305,16 @@
                 var div_element3 = document.createElement("div");
                 div_element3.setAttribute('class', 'info-bar-place');
                 div_element3.innerHTML = ivent[marker_number][2];
+                var img_info = document.createElement("img");
+                img_info.setAttribute('class', 'info-bar-infobutton');
+                img_info.setAttribute('onclick', 'info_div_view(' + marker_number + ');showinfo()');
+                img_info.setAttribute('src', 'img/info.png');
                 var line = document.createElement("HR");
+                
                 infowindow_bars.appendChild(div_element1);
                 infowindow_bars.appendChild(div_element2);
                 infowindow_bars.appendChild(div_element3);
+                infowindow_bars.appendChild(img_info);
                 infowindow_bars.appendChild(line);
                 
                 
@@ -319,6 +325,12 @@
     
         }
         
+
+        function showinfo() {
+            $("#infowindow-output,#infowindow-wrapper").show();
+            console.log("表示成功");
+        }; 
+
 
         //マーカーの生成をする関数
         function markermake(numbering,location){
