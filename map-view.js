@@ -299,7 +299,6 @@
                 document.getElementById("infowindow-output-time").innerHTML = ivent[num][1];
                 document.getElementById("infowindow-output-place").innerHTML = ivent[num][2];
                 document.getElementById("infowindow-output-location").innerHTML = ivent[num][3];
-                document.getElementById("infowindow-output-genre").innerHTML = ivent[num][8];
                 document.getElementById("infowindow-output-etc").innerHTML = ivent[num][6];                    
                 document.getElementById("infowindow-output-tel").innerHTML = "<a href='tel:042-" + ivent[num][5] + "'>042-" + ivent[num][5] + "</a>";
                 //移動ボタンにivent[3]を目的地として挿入

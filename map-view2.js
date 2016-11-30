@@ -206,7 +206,7 @@
                 ivent[marker_number] = filtered_iventData[i];
 
                 //filtered_iventData[]からキー値を指定してオブジェクトivent[]として取り出す
-                //0:曜日
+                //0:日にち
                 //1:時間
                 //2:施設名
                 //3:住所
@@ -311,7 +311,6 @@
                 document.getElementById("infowindow-output-time").innerHTML = ivent[num][1];
                 document.getElementById("infowindow-output-place").innerHTML = ivent[num][2];
                 document.getElementById("infowindow-output-location").innerHTML = ivent[num][3];
-                document.getElementById("infowindow-output-genre").innerHTML = ivent[num][8];
                 document.getElementById("infowindow-output-etc").innerHTML = ivent[num][6];                    
                 document.getElementById("infowindow-output-tel").innerHTML = "<a href='tel:042-" + ivent[num][5] + "'>042-" + ivent[num][5] + "</a>";
                 //移動ボタンにivent[3]を目的地として挿入
