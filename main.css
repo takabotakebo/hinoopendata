@@ -5,6 +5,56 @@ body{
     font-family: "Rounded Mplus 1c";
 }
 
+/*トップページのスタイル*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+#wrapper0{
+    position:relative;
+    width: 90vw;
+    height: 25vh;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-end; /* Safari */
+    align-items:         flex-end;
+    -webkit-flex-direction:row;
+    flex-direction:row;
+    -webkit-justify-content: space-around; /* Safari */
+    justify-content: space-around;
+    background-color: #FFF;
+    text-align: center;
+    top: 0px;
+}
+
+#title{
+    text-align: center;
+    margin-top: 20vh;
+    color: #69b766;
+}
+
+#choice_label{
+    font-weight: normal;
+    text-align: center;
+    font-size: 16pt;
+    margin: 0 auto;
+    margin-top:23vh;
+}
+
+.move{
+    height: 130px;
+    width: 97px;
+    background-color: #69b766;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: lighter;
+    line-height: 55px
+}
+
+
+/*--------------------------------------------------------------------------*/
+
 #loader-bg {
   display: none;
   position: fixed;
