@@ -483,35 +483,35 @@ hr{
 /*今月の表示ラベル*/
 .now_month{
     margin: 0 auto;
+    width: 20vw;
     color: #000;
     text-align: center;
     font-size: 21pt;
     margin-bottom: 5pt;
     letter-spacing: 1pt;
-    border: solid;
-    width: 30vw;
+    border-bottom: solid 3px;
 }
 /*前月移動ボタン*/
 #prev_month{
-    color: #4A4A4A;
+    color: #959595;
     float: left;
     font-size: 13pt;
     text-decoration: none;
     letter-spacing: 1pt;
     margin-left: 7%;
     top: 0px;
-    border: solid 1px;
+    border-bottom: solid 1px;
 }
 /*翌月移動ボタン*/
 #next_month{
-    color: #4A4A4A;
+    color: #959595;
     float: right;
     font-size: 13pt;
     text-decoration: none;
     letter-spacing: 1pt;
     margin-right: 7%;
     top: 0px;
-    border: solid;
+    border-bottom: solid 1px;
 }
 /*曜日*/
 .days_of_week{
