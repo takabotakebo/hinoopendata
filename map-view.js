@@ -294,11 +294,22 @@
                 markermake(marker_number,marker_position);
                 
                 
+                //情報一覧表示バーの出力
                 var infowindow_bars = document.getElementById("infowindow-bars");
-                var div_element = document.createElement("div");
-                div_element.setAttribute('class', 'info-bars');
-                div_element.innerHTML = ivent[marker_number][4];
-                infowindow_bars.appendChild(div_element);
+                var div_element1 = document.createElement("div");
+                div_element1.setAttribute('class', 'info-bar-title');
+                div_element1.innerHTML = ivent[marker_number][4];
+                var div_element2 = document.createElement("div");
+                div_element2.setAttribute('class', 'info-bar-date');
+                div_element2.innerHTML = "12月" + ivent[marker_number][0] + "日";
+                var div_element3 = document.createElement("div");
+                div_element3.setAttribute('class', 'info-bar-place');
+                div_element3.innerHTML = ivent[marker_number][2];
+                var line = document.createElement("HR");
+                infowindow_bars.appendChild(div_element1);
+                infowindow_bars.appendChild(div_element2);
+                infowindow_bars.appendChild(div_element3);
+                infowindow_bars.appendChild(line);
                 
                 
             }

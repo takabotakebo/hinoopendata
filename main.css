@@ -211,6 +211,9 @@ body{
     top:145px;
 }
 
+/*情報ポップアップのタグのスタイル
+  親要素はinfowindow-output;
+*/
 #infowindow-output-iventtitle-tag{
     text-align: center;
     position: absolute;
@@ -220,6 +223,9 @@ body{
     color: white;
 }
 
+/*情報ポップアップのタグのあとの文章のスタイル
+  親要素はinfowindow-output;
+*/
 .infowindow-output-aftertag{
     float: left;
     width: 200px;
@@ -229,7 +235,9 @@ body{
     white-space: nowrap;
 }
 
-
+/*情報ポップアップの備考欄のスタイル
+  親要素はinfowindow-output;
+*/
 #infowindow-output-textarea{
     position: absolute;
     width: 92%;
@@ -243,12 +251,18 @@ body{
     border-radius:5px;
 }
 
+/*情報ポップアップの備考欄の中の文字のスタイル
+  親要素はinfowindow-output;
+*/
 #infowindow-output-etc{
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 2%;
 }
 
+/*情報ポップアップのボタンを入れる箱のスタイル
+  親要素はinfowindow-output;
+*/
 #infowindow-output-buttonbox{
     position: absolute;
     width: 100%;
@@ -282,6 +296,8 @@ body{
     
 }
 
+/*情報ポップアップの二つのボタンを仕切るための入れ物のスタイル
+*/
 .infowindow-output-buttonbox-icon{
     float:left;
     height: 56px;
@@ -290,7 +306,8 @@ body{
     margin-left: 15px;
 }
 
-
+/*情報ポップアップの電話のボタンの横の文字スタイル
+*/
 .infowindow-output-buttonbox-text{
     float:left;
     text-align: center;
@@ -301,7 +318,8 @@ body{
     line-height: 70px;
 }
 
-
+/*情報ポップアップのナビゲーションのボタンの横の文字スタイル
+*/
 .infowindow-output-buttonbox-text2{
     float:left;
     text-align: center;
@@ -325,6 +343,44 @@ body{
     z-index: 1;
     max-height: 30vh;
     overflow: scroll;
+}
+
+
+/*情報一覧のタイトルのスタイル
+  親要素はinfowindow-bars
+*/
+.info-bar-title{
+    margin-left: 2vw;
+    width: 70vw;
+    height: 20px;
+    font-size: 12pt;
+    font-weight: bolder;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/*情報一覧の日程のスタイル
+  親要素はinfowindow-bars
+*/
+.info-bar-date{
+    margin-left: 10vw;
+    font-size: 10pt;
+    width: 70vw;
+    height: 16px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/*情報一覧の場所のスタイル
+  親要素はinfowindow-bars
+*/
+.info-bar-place{
+    margin-left: 10vw;
+    font-size: 10pt;
+    width: 70vw;
+    height: 18px;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 /*フッターバーのスタイル
