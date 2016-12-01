@@ -435,6 +435,9 @@
         
         $("#back-to-genre").click(function () {
             $('#wrapper3').slideDown();
+            if ($("#yajirushi").attr("sts") == "rot") {
+                $("#yajirushi").attr("sts", "std")
+            }
         }); 
         
         $("#toggle-infowindow-bars").click(function () {
@@ -481,7 +484,13 @@
             }
         });
         
-        
+        $("#toggle-infowindow-bars").on("click", function () {
+            if ($("#yajirushi").attr("sts") == "std") {
+                $("#yajirushi").attr("sts", "rot")
+            } else {
+                $("#yajirushi").attr("sts", "std")
+            }
+        });
         
         
         
