@@ -609,7 +609,7 @@ hr{
     margin: 5px auto;
     width: 92px;
     height: 92px;
-    font-size:14pt;
+    text-align: center;
     background-color: #69b766;
     -wabkit-border-radius: 10px;
     border-radius: 10px;
