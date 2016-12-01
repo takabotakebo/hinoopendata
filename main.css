@@ -640,6 +640,31 @@ hr{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     z-index: 10;
+    opacity: 0;
+    -webkit-animation:slideIn 2s ease-out ;
+    animation:slideIn 2s ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+     
+    from{
+        -ms-transform:translateX(80px);
+        -webkit-transform:translateX(80px);
+        transform:translateX(80px);
+        -ms-opacity:0;
+        -webkit-opacity:0;
+        opacity:0;
+    }
+    to{
+        -ms-transform:translateX(0px);
+        -webkit-transform:translateX(0px);
+        transform:translateX(0px);
+        -ms-opacity:1;
+        -webkit-opacity:1;
+        opacity:1;
+    }
 }
 
 
