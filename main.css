@@ -641,10 +641,15 @@ hr{
 
 /*ヘッダーバーのホームアイコン*/
 #back-to-home{
-    width: 4vh;
-    height: 4vh;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
     margin-right: 10px;
     margin-top: 0.5vh;
     float: right;
+    top: -5px;
+    background-color: #69b766;
+    border-radius: 22px;
 }
 
