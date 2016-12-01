@@ -423,6 +423,8 @@ body{
     background-color:#69B766;
 }
 
+
+
 /*ヘッダーバーのスタイル
   親要素はwrapper2
 */
@@ -430,12 +432,38 @@ body{
 
 #back-to-calender{
     float: left;
-    width: 40vw;
+    width: 49.5vw;
+    color: white;
+    font-size: 14pt;
+    border-right:solid 1vw;
+    border-right-color: white;
+    text-align: center;
 }
+
+
+
 
 #toggle-infowindow-bars{
     float: right;
-    width: 30vw;
+    width: 49.5vw;;
+    color: white;
+    font-size: 18pt;
+    border-left-color: white;
+    text-align: center;
+}
+
+.fotter-btn{
+    width: 5vh;
+    height: 5vh;
+    margin-top: 1.25vh;
+}
+
+#yajirushi{
+    position: absolute;
+    width: 15px;
+    line-height: 7.5vh;
+    top:5px;
+    left: 80vw;
 }
 
 .info-bars{
@@ -618,9 +646,13 @@ hr{
 /*ジャンル画面に戻るためのボタン*/
 #back-to-genre{
     float: left;
-    width: 40vw;
+    width: 49.5vw;
+    color: white;
+    font-size: 14pt;
+    border-right:solid 1vw;
+    border-right-color: white;
+    text-align: center;
 }
-
 
 /*アイコンなどに関するスタイル*/
 /*--------------------------------------------------------------------------*/
@@ -643,11 +675,11 @@ hr{
 }
 
 
-#toggle-infowindow-bars[sts="std"],
-#toggle-infowindow-bars[sts="rot"] {
+#yajirushi[sts="std"],
+#yajirushi[sts="rot"] {
   transition-property: transform;
   transition-duration: 0.7s;
 }
-#toggle-infowindow-bars[sts="rot"] {
+#yajirushi[sts="rot"] {
   transform: rotate(180deg);
 }
