@@ -363,7 +363,7 @@
              }
              
              var infowindow_bars = document.getElementById("infowindow-bars");
-             infowindow_bars.innerHTML = " ";
+             infowindow_bars.innerHTML = "<hr>";
          }
 
 
