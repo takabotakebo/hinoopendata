@@ -648,3 +648,12 @@ hr{
     float: right;
 }
 
+
+#toggle-infowindow-bars[sts="std"],
+#toggle-infowindow-bars[sts="rot"] {
+  transition-property: transform;
+  transition-duration: 0.7s;
+}
+#toggle-infowindow-bars[sts="rot"] {
+  transform: rotate(180deg);
+}

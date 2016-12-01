@@ -473,6 +473,14 @@
             
         }
         
+        $("#toggle-infowindow-bars").on("click", function () {
+            if ($(this).attr("sts") == "std") {
+                $(this).attr("sts", "rot")
+            } else {
+                $(this).attr("sts", "std")
+            }
+        });
+        
         
         
         
