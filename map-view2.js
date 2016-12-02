@@ -410,10 +410,11 @@
     $(function () {
         
         // スクロールを無効にする
+        /*
         $(window).on('touchmove.noScroll', function(e) {
             e.preventDefault();
         });
-        
+        */
         $().ready(function(){
             $("#infowindow-output,#infowindow-wrapper").hide();
                     
