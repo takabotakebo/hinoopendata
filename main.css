@@ -37,7 +37,9 @@ body{
     text-align: center;
     position: relative;
     top:15vh;
-    color: #69b766;
+    margin: 0 auto;
+    width:  300px;
+    height: 115px;
 }
 
 #choice_label{
