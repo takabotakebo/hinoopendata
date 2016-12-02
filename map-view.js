@@ -484,12 +484,15 @@
         
         
         // スクロールを無効にする
-        var scrollTop = $(window).scrollTop();
-        $(window).css({'position':'fixed','top':-scrollTop});
+        /*
+        $(window).on('touchmove.noScroll', function(e) {
+            e.preventDefault();
+        });
 
         // スクロール無効を解除する
-        $('body').css({'position':'static','top':'0'});
-        $('html,body').scrollTop(scrollTop);
+        $("body").off('.noScroll');
+        */
+        
         $().ready(function(){
             $("#infowindow-output,#infowindow-wrapper").hide();
                     
